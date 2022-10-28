@@ -1,6 +1,6 @@
-def delete(list_: list, index=None) -> list:
-    if index is None:
-        return list_[:-1]
+def delete(list_: list, index=-1) -> list:
+    if index == -1:
+        return list_[:index]
     else:
         return list_[:index] + list_[index + 1:]
 
