@@ -1,14 +1,14 @@
-import random
+from random import randint
 
 
-def get_unique_list_numbers() -> list[int]:
+def get_unique_list_numbers(min=-10, max=10, count=15) -> list[int]:
     numbers_list = []
-    count = 0
-    while count != 15:
-        number = random.randint(-10, 10)
+    i = 0
+    while i != count:
+        number = random.randint(min, max)
         if number not in numbers_list:
             numbers_list.append(number)
-            count += 1
+            i += 1
     return numbers_list
 
 
